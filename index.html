@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>Quick Quiz<style></style></h1>
+        <a class="btn" href="#" onclick="startQuiz()">Play</a>
+      </div>
+
+      <div id="game" class="game-container hidden">
+        <div class="question-container">
+          <h2 id="question">Question goes here</h2>
+        </div>
+        <div class="answer-container">
+          <button class="answer-btn" data-answer="1">Choice 1</button>
+          <button class="answer-btn" data-answer="2">Choice 2</button>
+          <button class="answer-btn" data-answer="3">Choice 3</button>
+          <button class="answer-btn" data-answer="4">Choice 4</button>
+        </div>
+        <div class="heads-up-display">
+          <div class="score-display">Score: <span id="score">0</span></div>
+          <div class="question-number-display">
+            Question: <span id="question-number">1</span>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div id="progress" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div id="end" class="flex-center flex-column hidden">
+        <h1>Quiz Completed</h1>
+        <p>Your score: <span id="final-score"></span></p>
+        <a class="btn" href="#" onclick="restartQuiz()">Restart</a><br />
+
+        <a class="btn" href="#" onclick="returnHome()">Home</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
